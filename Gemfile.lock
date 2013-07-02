@@ -1,0 +1,36 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.5)
+    api_smith (1.2.0)
+      hashie (~> 1.0)
+      httparty
+      net-http-persistent
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
+    hashie (1.2.0)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    mini_portile (0.5.0)
+    multi_json (1.7.7)
+    multi_xml (0.5.4)
+    multipart-post (1.2.0)
+    net-http-persistent (2.8)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    rdf (1.0.7)
+      addressable (>= 2.2)
+    rdf-virtuoso (0.1.4)
+      api_smith (~> 1.2.0)
+      httparty (~> 0.10.2)
+      rdf (~> 1.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  faraday
+  nokogiri
+  rdf
+  rdf-virtuoso
