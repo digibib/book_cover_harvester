@@ -2,6 +2,9 @@ require "./sparql.rb"
 
 
 class Review
+
+	attr_reader :books
+	
 	def initialize(uri)
 		@uri = uri
 		@books = Array(find_books(@uri))
@@ -18,6 +21,8 @@ class Review
 end
 
 class Book
+
+	attr_reader :isbn
 
 	def initialize(uri, isbn)
 		@uri = uri
