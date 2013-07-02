@@ -20,10 +20,16 @@ class Review
 end
 
 class Book
+
 	def initialize(uri, isbn)
 		@uri = uri
 		@isbn = isbn
 	end
+
+	def store_cover_url(cover_url)
+		Sparql.store_cover_url(@uri, cover_url)
+	end
+
 end
 
 class Resource

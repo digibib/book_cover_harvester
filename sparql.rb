@@ -15,7 +15,7 @@ module Sparql
 
 	def self.fetch_reviews_without_depiction
 		q = QUERY.select(:review).distinct.from(Settings::BOOKSGRAPH)
-		q.where([:book, RDF::REV.hasReview, :review],)
+		q.where([:book, RDF::REV.hasReview, :review])
 		q.where([:book, RDF.type, RDF::BIBO.Document])
 		q.minus([:book, RDF::FOAF.depiction, :cover_url])
 		REPO.select(q).bindings[:review]
@@ -28,6 +28,11 @@ module Sparql
 		q.where([:book, RDF.type, RDF::BIBO.Document])
 		q.where([:book, RDF::BIBO.isbn, :isbn])
 		REPO.select(q)
+	end
+
+	def self.store_cover_url(uri, cover_url)
+		q = QUERY.insert_data([uri, RDF::FOAF.depiction, RDF::URI(cover_url)]).graph(Settings::BOOKSGRAPH)
+		REPO.insert_data(q)
 	end
 
 end
