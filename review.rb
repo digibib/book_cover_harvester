@@ -22,7 +22,7 @@ end
 
 class Book
 
-	attr_reader :isbn
+	attr_reader :isbn, :uri
 
 	def initialize(uri, isbn)
 		@uri = uri

@@ -1,5 +1,6 @@
 require "faraday"
 require "nokogiri"
+require "digest"
 
 class Resource
 
@@ -36,7 +37,16 @@ class Bokkilden < Resource
 
 	def parse_result(result)
 		xml = Nokogiri::XML(result.body)
-		xml.xpath('//BildeURL'). map { |url| url.content}
+		res = xml.xpath('//BildeURL'). map { |url| url.content}. map { |url| url.sub(/&width=80$/, '')}
+		filter_dummy_pictures(res)
+	end
+
+	def filter_dummy_pictures(res)
+		res.delete_if do |result|
+			img = Faraday.get(result).body
+			hash = Digest::MD5.hexdigest(img)
+			true if hash == "0a993cc6694e9249965e626eb4e037c7"
+		end
 	end
 
 end
