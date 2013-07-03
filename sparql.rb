@@ -23,10 +23,11 @@ module Sparql
 
 	def self.fetch_book_data(review_uri)
 		review_uri = RDF::URI(review_uri) unless review_uri.instance_of?(RDF::URI)
-		q = QUERY.select(:book, :isbn).distinct.from(Settings::BOOKSGRAPH)
+		q = QUERY.select(:book, :isbn, :bibid).distinct.from(Settings::BOOKSGRAPH)
 		q.where([:book, RDF::REV.hasReview, review_uri])
-		q.where([:book, RDF.type, RDF::BIBO.Document])
 		q.where([:book, RDF::BIBO.isbn, :isbn])
+		q.where([:book, RDF::DEICH.bibliofilID, :bibid])
+		q.where([:book, RDF.type, RDF::BIBO.Document])
 		REPO.select(q)
 	end
 

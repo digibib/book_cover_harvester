@@ -23,9 +23,9 @@ reviews_to_check.each do |review|
 	r.books.each do |book|
 		cover_urls = nil
 		begin
-			Timeout::timeout(2) {cover_urls = Bokkilden.new(book.isbn).check_for_cover_url}
+			Timeout::timeout(5) {cover_urls = Katalogkrydder.new(book.isbn, book.bibid).check_for_cover_url + Bokkilden.new(book.isbn, book.bibid).check_for_cover_url}
 		rescue Timeout::Error
-			log.info("Timeout on Bokkilden request for #{book.isbn}")
+			log.info("Timeout on request for #{book.isbn}")
 			next
 		end
 

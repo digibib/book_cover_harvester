@@ -1,11 +1,13 @@
+# encoding: utf-8
 require "faraday"
 require "nokogiri"
 require "digest"
 
 class Resource
 
-	def initialize(isbn)
+	def initialize(isbn, bibid)
 		@isbn = isbn
+		@bibid = bibid
 		prepare_request
 	end
 
@@ -37,7 +39,7 @@ class Bokkilden < Resource
 
 	def parse_result(result)
 		xml = Nokogiri::XML(result.body)
-		res = xml.xpath('//BildeURL'). map { |url| url.content}. map { |url| url.sub(/&width=80$/, '')}
+		res = xml.xpath('//BildeURL').map{ |url| url.content}.map{ |url| url.sub(/&width=80$/, '')}
 		filter_dummy_pictures(res)
 	end
 
@@ -47,6 +49,22 @@ class Bokkilden < Resource
 			hash = Digest::MD5.hexdigest(img)
 			true if hash == "0a993cc6694e9249965e626eb4e037c7"
 		end
+	end
+
+end
+
+class Katalogkrydder < Resource
+
+	private
+
+	def prepare_request
+		@path = "http://krydder.bibsyst.no/cgi-bin/krydderxml"
+		@query_params = "?bid=#{@bibid}"
+	end
+
+	def parse_result(result)
+		xml = Nokogiri::XML(result.body)
+		res = xml.xpath('//xmlns:størrelse[contains(text(), "stor")]/../xmlns:url').map{ |url| url.text}
 	end
 
 end

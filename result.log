@@ -1,50 +1,10 @@
-# Logfile created on 2013-07-02 13:37:23 +0200 by logger.rb/31641
-I, [2013-07-02T13:37:23.901622 #6071]  INFO -- : Checking 404 reviews
-I, [2013-07-02T13:37:26.420306 #6071]  INFO -- : http://data.deichman.no/resource/tnr_616504 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=146776
-I, [2013-07-02T13:37:31.026526 #6071]  INFO -- : http://data.deichman.no/resource/tnr_664791 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1445672
-I, [2013-07-02T13:37:31.475998 #6071]  INFO -- : http://data.deichman.no/resource/tnr_726465 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2332789
-I, [2013-07-02T13:37:31.705848 #6071]  INFO -- : http://data.deichman.no/resource/tnr_726465 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2332789
-I, [2013-07-02T13:37:32.133520 #6071]  INFO -- : http://data.deichman.no/resource/tnr_718912 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1933413
-I, [2013-07-02T13:37:32.376615 #6071]  INFO -- : http://data.deichman.no/resource/tnr_718912 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1933413
-I, [2013-07-02T13:37:33.769674 #6071]  INFO -- : http://data.deichman.no/resource/tnr_590011 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=129757
-I, [2013-07-02T13:37:34.254215 #6071]  INFO -- : http://data.deichman.no/resource/tnr_820311 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3754429
-I, [2013-07-02T13:37:36.440018 #6071]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/onskebok/id_794
-I, [2013-07-02T13:37:40.745682 #6071]  INFO -- : http://data.deichman.no/resource/tnr_814447 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3131977
-I, [2013-07-02T13:37:42.319795 #6071]  INFO -- : http://data.deichman.no/resource/tnr_643482 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=147911
-I, [2013-07-02T13:37:43.329654 #6071]  INFO -- : http://data.deichman.no/resource/tnr_627718 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=147952
-I, [2013-07-02T13:37:47.807330 #6071]  INFO -- : http://data.deichman.no/resource/tnr_791551 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3077207
-I, [2013-07-02T13:37:54.462782 #6071]  INFO -- : http://data.deichman.no/resource/tnr_796520 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3039080
-I, [2013-07-02T13:37:56.036073 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1130691 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=5615938
-I, [2013-07-02T13:37:58.644652 #6071]  INFO -- : Timeout on storing cover url for http://data.deichman.no/resource/tnr_712722
-I, [2013-07-02T13:37:59.073717 #6071]  INFO -- : http://data.deichman.no/resource/tnr_722608 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2152247
-I, [2013-07-02T13:37:59.319515 #6071]  INFO -- : http://data.deichman.no/resource/tnr_722608 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2152247
-I, [2013-07-02T13:38:03.830651 #6071]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/onskebok/id_639
-I, [2013-07-02T13:38:07.339967 #6071]  INFO -- : http://data.deichman.no/resource/tnr_753613 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2716464
-I, [2013-07-02T13:38:11.923262 #6071]  INFO -- : http://data.deichman.no/resource/tnr_821264 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3708154
-I, [2013-07-02T13:38:12.938216 #6071]  INFO -- : http://data.deichman.no/resource/tnr_664791 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1445672
-I, [2013-07-02T13:38:15.289155 #6071]  INFO -- : http://data.deichman.no/resource/tnr_562474 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=119779
-I, [2013-07-02T13:38:16.674106 #6071]  INFO -- : http://data.deichman.no/resource/tnr_632770 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=147950
-I, [2013-07-02T13:38:17.491663 #6071]  INFO -- : http://data.deichman.no/resource/tnr_629602 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=141957
-I, [2013-07-02T13:38:22.405363 #6071]  INFO -- : http://data.deichman.no/resource/tnr_556983 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=115759
-I, [2013-07-02T13:38:22.832634 #6071]  INFO -- : http://data.deichman.no/resource/tnr_586019 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=129524
-I, [2013-07-02T13:38:26.138421 #6071]  INFO -- : http://data.deichman.no/resource/tnr_711130 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=3200835
-I, [2013-07-02T13:38:28.095719 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1137116 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=5660749
-I, [2013-07-02T13:38:29.860444 #6071]  INFO -- : http://data.deichman.no/resource/tnr_563503 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=118585
-I, [2013-07-02T13:38:31.054223 #6071]  INFO -- : http://data.deichman.no/resource/tnr_708712 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1852727
-I, [2013-07-02T13:38:31.291446 #6071]  INFO -- : http://data.deichman.no/resource/tnr_708712 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1852727
-I, [2013-07-02T13:38:32.093323 #6071]  INFO -- : http://data.deichman.no/resource/tnr_701400 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2602565
-I, [2013-07-02T13:38:32.327155 #6071]  INFO -- : http://data.deichman.no/resource/tnr_701400 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=2602565
-I, [2013-07-02T13:38:45.885709 #6071]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/lesehulen/id_7
-I, [2013-07-02T13:38:50.480171 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1381186 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=8157720
-I, [2013-07-02T13:38:50.921497 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1372524 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=8007748
-I, [2013-07-02T13:38:51.356761 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1387430 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=136373
-I, [2013-07-02T13:38:51.789061 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1373665 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=8031364
-I, [2013-07-02T13:38:53.000372 #6071]  INFO -- : http://data.deichman.no/resource/tnr_632770 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=147950
-I, [2013-07-02T13:38:53.429623 #6071]  INFO -- : http://data.deichman.no/resource/tnr_632770 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=147950
-I, [2013-07-02T13:38:58.952436 #6071]  INFO -- : Timeout on review http://data.deichman.no/bergen_folkebibliotek/review/id_382
-I, [2013-07-02T13:38:59.380760 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1372524 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=8007748
-I, [2013-07-02T13:38:59.794783 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1387430 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=136373
-I, [2013-07-02T13:39:00.233704 #6071]  INFO -- : http://data.deichman.no/resource/tnr_1373665 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=8031364
-I, [2013-07-02T13:43:27.750161 #6920]  INFO -- : Checking 368 reviews
-I, [2013-07-02T13:43:53.109496 #6920]  INFO -- : http://data.deichman.no/resource/tnr_712722 - found cover url http://www.bokkilden.no/SamboWeb/servlet/VisBildeServlet?produktId=1434115
-I, [2013-07-02T13:44:05.183981 #6920]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/onskebok/id_1455
+# Logfile created on 2013-07-03 11:41:11 +0200 by logger.rb/31641
+I, [2013-07-03T11:41:12.377273 #4090]  INFO -- : Checking 310 reviews
+I, [2013-07-03T11:41:45.421710 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/tfb/id_172
+I, [2013-07-03T11:41:49.562528 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/lesehulen/id_232
+I, [2013-07-03T11:42:15.983705 #4090]  INFO -- : http://data.deichman.no/resource/tnr_562484 - found cover url http://krydder.bib.no/0135/741037.bilde.1327445763.s.jpg
+I, [2013-07-03T11:42:34.426337 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/littpuls/id_54
+I, [2013-07-03T11:42:47.632679 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/deichman/bokhylla/id_432
+I, [2013-07-03T11:42:59.712053 #4090]  INFO -- : http://data.deichman.no/resource/tnr_591224 - found cover url http://krydder.bib.no/0012/804731.bilde.1299759271.s.jpg
+I, [2013-07-03T11:43:47.021384 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/deichmanno/id_80
+I, [2013-07-03T11:44:10.288353 #4090]  INFO -- : Timeout on review http://data.deichman.no/bookreviews/serieteket/id_15

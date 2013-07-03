@@ -15,18 +15,19 @@ class Review
 	def find_books(uri)
 		books = Sparql.fetch_book_data(uri)
 		books.map { |book|
-			Book.new(book.book, book.isbn)
+			Book.new(book.book, book.isbn, book.bibid)
 		}
 	end
 end
 
 class Book
 
-	attr_reader :isbn, :uri
+	attr_reader :isbn, :uri, :bibid
 
-	def initialize(uri, isbn)
+	def initialize(uri, isbn, bibid)
 		@uri = uri
 		@isbn = isbn
+		@bibid = bibid
 	end
 
 	def store_cover_url(cover_url)
