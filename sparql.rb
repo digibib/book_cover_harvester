@@ -21,6 +21,20 @@ module Sparql
     REPO.select(q).bindings[:review]
   end
 
+  def self.fetch_documents_without_depiction(from_year, to_year)
+    # Returns manifestations without depiction issued in a given interval.
+    # Note that virtuoso  limits the results to 10,000 rows - so don't choose
+    # a too large interval.
+    q = QUERY.select(:book, :isbn, :bibid).distinct.from(Settings::BOOKSGRAPH)
+    q.where([:book, RDF.type, RDF::BIBO.Document])
+    q.where([:book, RDF::BIBO.isbn, :isbn])
+    q.where([:book, RDF::DEICH.bibliofilID, :bibid])
+    q.where([:book, RDF::DC.issued, :issued])
+    q.minus([:book, RDF::FOAF.depiction, :cover_url])
+    q.filter("xsd:integer(?issued) >= #{from_year} && xsd:integer(?issued) <= #{to_year}")
+    REPO.select(q)
+  end
+
   def self.fetch_book_data(review_uri)
     review_uri = RDF::URI(review_uri) unless review_uri.instance_of?(RDF::URI)
     q = QUERY.select(:book, :isbn, :bibid).distinct.from(Settings::BOOKSGRAPH)
