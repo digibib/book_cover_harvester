@@ -6,6 +6,7 @@ require "timeout"
 log = Logger.new("result.log")
 
 reviews_to_check = Sparql.fetch_reviews_without_depiction
+resources = [Katalogkrydder, Bokkilden]
 log.info("Checking #{reviews_to_check.count} reviews")
 puts "Found #{reviews_to_check.count} reviews"
 
@@ -21,9 +22,11 @@ reviews_to_check.each do |review|
   print "."
 
   r.books.each do |book|
-    cover_urls = nil
+    cover_urls = []
     begin
-      Timeout::timeout(5) {cover_urls = Katalogkrydder.new(book.isbn, book.bibid).check_for_cover_url + Bokkilden.new(book.isbn, book.bibid).check_for_cover_url}
+      Timeout::timeout(5) {
+        resources.each { |r| cover_urls += r.new(book.isbn, book.bibid).check_for_cover_url }
+       }
     rescue Timeout::Error
       log.info("Timeout on request for #{book.isbn}")
       next
