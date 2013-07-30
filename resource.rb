@@ -4,6 +4,8 @@ require "nokogiri"
 require "digest"
 
 class Resource
+  # Resource superclass. Subclasses must implement methods "prepare_request"
+  # and "parse_result".
 
   def initialize(isbn, bibid)
     @isbn = isbn
