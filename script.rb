@@ -10,37 +10,37 @@ log.info("Checking #{reviews_to_check.count} reviews")
 puts "Found #{reviews_to_check.count} reviews"
 
 reviews_to_check.each do |review|
-	r = nil
-	begin
-		Timeout::timeout(2) {r = Review.new(review)}
-	rescue Timeout::Error
-		log.info("Timeout on review #{review}")
-		next
-	end
+  r = nil
+  begin
+    Timeout::timeout(2) {r = Review.new(review)}
+  rescue Timeout::Error
+    log.info("Timeout on review #{review}")
+    next
+  end
 
-	print "."
+  print "."
 
-	r.books.each do |book|
-		cover_urls = nil
-		begin
-			Timeout::timeout(5) {cover_urls = Katalogkrydder.new(book.isbn, book.bibid).check_for_cover_url + Bokkilden.new(book.isbn, book.bibid).check_for_cover_url}
-		rescue Timeout::Error
-			log.info("Timeout on request for #{book.isbn}")
-			next
-		end
+  r.books.each do |book|
+    cover_urls = nil
+    begin
+      Timeout::timeout(5) {cover_urls = Katalogkrydder.new(book.isbn, book.bibid).check_for_cover_url + Bokkilden.new(book.isbn, book.bibid).check_for_cover_url}
+    rescue Timeout::Error
+      log.info("Timeout on request for #{book.isbn}")
+      next
+    end
 
-		cover_urls.each do |cover|
-			begin
-				Timeout::timeout(2) {book.store_cover_url(cover)}
-			rescue Timeout::Error
-				log.info("Timeout on storing cover url for #{book.uri}")
-				next
-			end
+    cover_urls.each do |cover|
+      begin
+        Timeout::timeout(2) {book.store_cover_url(cover)}
+      rescue Timeout::Error
+        log.info("Timeout on storing cover url for #{book.uri}")
+        next
+      end
 
-			log.info("#{book.uri} - found cover url #{cover}")
+      log.info("#{book.uri} - found cover url #{cover}")
 
-		end
-	end
+    end
+  end
 end
 
 puts "\ndone"
